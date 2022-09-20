@@ -59,11 +59,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\reno\\source\\repos\\SPAPIstab\\SPAPIstab\\SPAPIstab.csproj",
+      "projectUniqueName": "C:\\Users\\reno\\source\\repos\\renoneve\\SPAPIstab\\SPAPIstab\\SPAPIstab.csproj",
       "projectName": "SPAPIstab",
-      "projectPath": "C:\\Users\\reno\\source\\repos\\SPAPIstab\\SPAPIstab\\SPAPIstab.csproj",
+      "projectPath": "C:\\Users\\reno\\source\\repos\\renoneve\\SPAPIstab\\SPAPIstab\\SPAPIstab.csproj",
       "packagesPath": "C:\\Users\\reno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\reno\\source\\repos\\SPAPIstab\\SPAPIstab\\obj\\",
+      "outputPath": "C:\\Users\\reno\\source\\repos\\renoneve\\SPAPIstab\\SPAPIstab\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -114,12 +114,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.16, 5.0.16]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
