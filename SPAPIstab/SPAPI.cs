@@ -11,8 +11,8 @@ namespace SPAPIstab
 {
     class SPAPI
     {
-        internal const String strAppId = "amzn1.sellerapps.app.b8e54650-144f-4372-baf3-8db8d33115b8"; //SP-api 
-        private const String strEndPoint = "https://main-trademark.ssl-lolipop.jp/spapiphp/res.php";
+        internal const String strAppId = "{set your sp-api application id}"; 
+        private const String strEndPoint = "{set your backend url}";
 
         private static Dictionary<Region, String> dctRegion_region = new Dictionary<Region, string>() { { Region.JP, "us-west-2" } };
         private static Dictionary<Region, String> dctRegion_endpoint = new Dictionary<Region, string>() { { Region.JP, "https://sellingpartnerapi-fe.amazon.com" } };
