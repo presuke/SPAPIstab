@@ -1,0 +1,225 @@
+2022/09/08 0:00:43	System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SPAPIstab.IF.post(String url, String postData, MethodBase methodBase, Exception& error)
+2022/09/08 0:00:43	System.Exception: 
+curerntMethod:System.Collections.Generic.Dictionary`2[System.String,System.String] getListingOffers(System.String, System.String, System.String, Region, System.Collections.Generic.Dictionary`2[System.String,SPAPIstab.DataModel+ItemAttribute])
+2022/09/08 0:00:43	System.Exception: 
+url:https://main-trademark.ssl-lolipop.jp/spapiphp/res.php
+2022/09/08 0:00:43	System.Exception: 
+postData:xml=%3Croot%3E%3Caction%3EgetListingOffers%3C%2Faction%3E%3CUserId%3EtestUser%3C%2FUserId%3E%3CappId
+2022/09/08 0:00:45	System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SPAPIstab.IF.post(String url, String postData, MethodBase methodBase, Exception& error)
+2022/09/08 0:00:45	System.Exception: 
+curerntMethod:System.Collections.Generic.Dictionary`2[System.String,System.String] getListingOffers(System.String, System.String, System.String, Region, System.Collections.Generic.Dictionary`2[System.String,SPAPIstab.DataModel+ItemAttribute])
+2022/09/08 0:00:45	System.Exception: 
+url:https://main-trademark.ssl-lolipop.jp/spapiphp/res.php
+2022/09/08 0:00:45	System.Exception: 
+postData:xml=%3Croot%3E%3Caction%3EgetListingOffers%3C%2Faction%3E%3CUserId%3EtestUser%3C%2FUserId%3E%3CappId
+2022/09/08 0:00:47	System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SPAPIstab.IF.post(String url, String postData, MethodBase methodBase, Exception& error)
+2022/09/08 0:00:47	System.Exception: 
+curerntMethod:System.Collections.Generic.Dictionary`2[System.String,System.String] getListingOffers(System.String, System.String, System.String, Region, System.Collections.Generic.Dictionary`2[System.String,SPAPIstab.DataModel+ItemAttribute])
+2022/09/08 0:00:47	System.Exception: 
+url:https://main-trademark.ssl-lolipop.jp/spapiphp/res.php
+2022/09/08 0:00:47	System.Exception: 
+postData:xml=%3Croot%3E%3Caction%3EgetListingOffers%3C%2Faction%3E%3CUserId%3EtestUser%3C%2FUserId%3E%3CappId
+2022/09/08 0:00:49	System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SPAPIstab.IF.post(String url, String postData, MethodBase methodBase, Exception& error)
+2022/09/08 0:00:49	System.Exception: 
+curerntMethod:System.Collections.Generic.Dictionary`2[System.String,System.String] getListingOffers(System.String, System.String, System.String, Region, System.Collections.Generic.Dictionary`2[System.String,SPAPIstab.DataModel+ItemAttribute])
+2022/09/08 0:00:49	System.Exception: 
+url:https://main-trademark.ssl-lolipop.jp/spapiphp/res.php
+2022/09/08 0:00:49	System.Exception: 
+postData:xml=%3Croot%3E%3Caction%3EgetListingOffers%3C%2Faction%3E%3CUserId%3EtestUser%3C%2FUserId%3E%3CappId
+2022/09/08 0:00:51	System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SPAPIstab.IF.post(String url, String postData, MethodBase methodBase, Exception& error)
+2022/09/08 0:00:51	System.Exception: 
+curerntMethod:System.Collections.Generic.Dictionary`2[System.String,System.String] getListingOffers(System.String, System.String, System.String, Region, System.Collections.Generic.Dictionary`2[System.String,SPAPIstab.DataModel+ItemAttribute])
+2022/09/08 0:00:51	System.Exception: 
+url:https://main-trademark.ssl-lolipop.jp/spapiphp/res.php
+2022/09/08 0:00:51	System.Exception: 
+postData:xml=%3Croot%3E%3Caction%3EgetListingOffers%3C%2Faction%3E%3CUserId%3EtestUser%3C%2FUserId%3E%3CappId
+2022/09/08 0:00:53	System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SPAPIstab.IF.post(String url, String postData, MethodBase methodBase, Exception& error)
+2022/09/08 0:00:53	System.Exception: 
+curerntMethod:System.Collections.Generic.Dictionary`2[System.String,System.String] getListingOffers(System.String, System.String, System.String, Region, System.Collections.Generic.Dictionary`2[System.String,SPAPIstab.DataModel+ItemAttribute])
+2022/09/08 0:00:53	System.Exception: 
+url:https://main-trademark.ssl-lolipop.jp/spapiphp/res.php
+2022/09/08 0:00:53	System.Exception: 
+postData:xml=%3Croot%3E%3Caction%3EgetListingOffers%3C%2Faction%3E%3CUserId%3EtestUser%3C%2FUserId%3E%3CappId
+2022/09/08 0:00:55	System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SPAPIstab.IF.post(String url, String postData, MethodBase methodBase, Exception& error)
+2022/09/08 0:00:55	System.Exception: 
+curerntMethod:System.Collections.Generic.Dictionary`2[System.String,System.String] getListingOffers(System.String, System.String, System.String, Region, System.Collections.Generic.Dictionary`2[System.String,SPAPIstab.DataModel+ItemAttribute])
+2022/09/08 0:00:55	System.Exception: 
+url:https://main-trademark.ssl-lolipop.jp/spapiphp/res.php
+2022/09/08 0:00:55	System.Exception: 
+postData:xml=%3Croot%3E%3Caction%3EgetListingOffers%3C%2Faction%3E%3CUserId%3EtestUser%3C%2FUserId%3E%3CappId
+2022/09/08 0:00:57	System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SPAPIstab.IF.post(String url, String postData, MethodBase methodBase, Exception& error)
+2022/09/08 0:00:57	System.Exception: 
+curerntMethod:System.Collections.Generic.Dictionary`2[System.String,System.String] getListingOffers(System.String, System.String, System.String, Region, System.Collections.Generic.Dictionary`2[System.String,SPAPIstab.DataModel+ItemAttribute])
+2022/09/08 0:00:57	System.Exception: 
+url:https://main-trademark.ssl-lolipop.jp/spapiphp/res.php
+2022/09/08 0:00:57	System.Exception: 
+postData:xml=%3Croot%3E%3Caction%3EgetListingOffers%3C%2Faction%3E%3CUserId%3EtestUser%3C%2FUserId%3E%3CappId
+2022/09/08 0:00:59	System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SPAPIstab.IF.post(String url, String postData, MethodBase methodBase, Exception& error)
+2022/09/08 0:00:59	System.Exception: 
+curerntMethod:System.Collections.Generic.Dictionary`2[System.String,System.String] getListingOffers(System.String, System.String, System.String, Region, System.Collections.Generic.Dictionary`2[System.String,SPAPIstab.DataModel+ItemAttribute])
+2022/09/08 0:00:59	System.Exception: 
+url:https://main-trademark.ssl-lolipop.jp/spapiphp/res.php
+2022/09/08 0:00:59	System.Exception: 
+postData:xml=%3Croot%3E%3Caction%3EgetListingOffers%3C%2Faction%3E%3CUserId%3EtestUser%3C%2FUserId%3E%3CappId
+2022/09/08 0:01:01	System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SPAPIstab.IF.post(String url, String postData, MethodBase methodBase, Exception& error)
+2022/09/08 0:01:01	System.Exception: 
+curerntMethod:System.Collections.Generic.Dictionary`2[System.String,System.String] getListingOffers(System.String, System.String, System.String, Region, System.Collections.Generic.Dictionary`2[System.String,SPAPIstab.DataModel+ItemAttribute])
+2022/09/08 0:01:01	System.Exception: 
+url:https://main-trademark.ssl-lolipop.jp/spapiphp/res.php
+2022/09/08 0:01:01	System.Exception: 
+postData:xml=%3Croot%3E%3Caction%3EgetListingOffers%3C%2Faction%3E%3CUserId%3EtestUser%3C%2FUserId%3E%3CappId
+2022/09/08 0:14:17	System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SPAPIstab.IF.post(String url, String postData, MethodBase methodBase, Exception& error)
+2022/09/08 0:14:17	System.Exception: 
+curerntMethod:System.Collections.Generic.Dictionary`2[System.String,System.String] getListingOffers(System.String, System.String, System.String, Region, System.Collections.Generic.Dictionary`2[System.String,SPAPIstab.DataModel+ItemAttribute])
+2022/09/08 0:14:17	System.Exception: 
+url:https://main-trademark.ssl-lolipop.jp/spapiphp/res.php
+2022/09/08 0:14:17	System.Exception: 
+postData:xml=%3Croot%3E%3Caction%3EgetListingOffers%3C%2Faction%3E%3CUserId%3EtestUser%3C%2FUserId%3E%3CappId
+2022/09/08 0:14:19	System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SPAPIstab.IF.post(String url, String postData, MethodBase methodBase, Exception& error)
+2022/09/08 0:14:19	System.Exception: 
+curerntMethod:System.Collections.Generic.Dictionary`2[System.String,System.String] getListingOffers(System.String, System.String, System.String, Region, System.Collections.Generic.Dictionary`2[System.String,SPAPIstab.DataModel+ItemAttribute])
+2022/09/08 0:14:19	System.Exception: 
+url:https://main-trademark.ssl-lolipop.jp/spapiphp/res.php
+2022/09/08 0:14:19	System.Exception: 
+postData:xml=%3Croot%3E%3Caction%3EgetListingOffers%3C%2Faction%3E%3CUserId%3EtestUser%3C%2FUserId%3E%3CappId
+2022/09/08 0:14:21	System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SPAPIstab.IF.post(String url, String postData, MethodBase methodBase, Exception& error)
+2022/09/08 0:14:21	System.Exception: 
+curerntMethod:System.Collections.Generic.Dictionary`2[System.String,System.String] getListingOffers(System.String, System.String, System.String, Region, System.Collections.Generic.Dictionary`2[System.String,SPAPIstab.DataModel+ItemAttribute])
+2022/09/08 0:14:21	System.Exception: 
+url:https://main-trademark.ssl-lolipop.jp/spapiphp/res.php
+2022/09/08 0:14:21	System.Exception: 
+postData:xml=%3Croot%3E%3Caction%3EgetListingOffers%3C%2Faction%3E%3CUserId%3EtestUser%3C%2FUserId%3E%3CappId
+2022/09/08 0:14:23	System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SPAPIstab.IF.post(String url, String postData, MethodBase methodBase, Exception& error)
+2022/09/08 0:14:23	System.Exception: 
+curerntMethod:System.Collections.Generic.Dictionary`2[System.String,System.String] getListingOffers(System.String, System.String, System.String, Region, System.Collections.Generic.Dictionary`2[System.String,SPAPIstab.DataModel+ItemAttribute])
+2022/09/08 0:14:23	System.Exception: 
+url:https://main-trademark.ssl-lolipop.jp/spapiphp/res.php
+2022/09/08 0:14:23	System.Exception: 
+postData:xml=%3Croot%3E%3Caction%3EgetListingOffers%3C%2Faction%3E%3CUserId%3EtestUser%3C%2FUserId%3E%3CappId
+2022/09/08 0:14:25	System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SPAPIstab.IF.post(String url, String postData, MethodBase methodBase, Exception& error)
+2022/09/08 0:14:25	System.Exception: 
+curerntMethod:System.Collections.Generic.Dictionary`2[System.String,System.String] getListingOffers(System.String, System.String, System.String, Region, System.Collections.Generic.Dictionary`2[System.String,SPAPIstab.DataModel+ItemAttribute])
+2022/09/08 0:14:25	System.Exception: 
+url:https://main-trademark.ssl-lolipop.jp/spapiphp/res.php
+2022/09/08 0:14:25	System.Exception: 
+postData:xml=%3Croot%3E%3Caction%3EgetListingOffers%3C%2Faction%3E%3CUserId%3EtestUser%3C%2FUserId%3E%3CappId
+2022/09/08 0:14:27	System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SPAPIstab.IF.post(String url, String postData, MethodBase methodBase, Exception& error)
+2022/09/08 0:14:27	System.Exception: 
+curerntMethod:System.Collections.Generic.Dictionary`2[System.String,System.String] getListingOffers(System.String, System.String, System.String, Region, System.Collections.Generic.Dictionary`2[System.String,SPAPIstab.DataModel+ItemAttribute])
+2022/09/08 0:14:27	System.Exception: 
+url:https://main-trademark.ssl-lolipop.jp/spapiphp/res.php
+2022/09/08 0:14:27	System.Exception: 
+postData:xml=%3Croot%3E%3Caction%3EgetListingOffers%3C%2Faction%3E%3CUserId%3EtestUser%3C%2FUserId%3E%3CappId
+2022/09/08 0:14:29	System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SPAPIstab.IF.post(String url, String postData, MethodBase methodBase, Exception& error)
+2022/09/08 0:14:29	System.Exception: 
+curerntMethod:System.Collections.Generic.Dictionary`2[System.String,System.String] getListingOffers(System.String, System.String, System.String, Region, System.Collections.Generic.Dictionary`2[System.String,SPAPIstab.DataModel+ItemAttribute])
+2022/09/08 0:14:29	System.Exception: 
+url:https://main-trademark.ssl-lolipop.jp/spapiphp/res.php
+2022/09/08 0:14:29	System.Exception: 
+postData:xml=%3Croot%3E%3Caction%3EgetListingOffers%3C%2Faction%3E%3CUserId%3EtestUser%3C%2FUserId%3E%3CappId
+2022/09/08 0:14:31	System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SPAPIstab.IF.post(String url, String postData, MethodBase methodBase, Exception& error)
+2022/09/08 0:14:31	System.Exception: 
+curerntMethod:System.Collections.Generic.Dictionary`2[System.String,System.String] getListingOffers(System.String, System.String, System.String, Region, System.Collections.Generic.Dictionary`2[System.String,SPAPIstab.DataModel+ItemAttribute])
+2022/09/08 0:14:31	System.Exception: 
+url:https://main-trademark.ssl-lolipop.jp/spapiphp/res.php
+2022/09/08 0:14:31	System.Exception: 
+postData:xml=%3Croot%3E%3Caction%3EgetListingOffers%3C%2Faction%3E%3CUserId%3EtestUser%3C%2FUserId%3E%3CappId
+2022/09/08 0:14:33	System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SPAPIstab.IF.post(String url, String postData, MethodBase methodBase, Exception& error)
+2022/09/08 0:14:33	System.Exception: 
+curerntMethod:System.Collections.Generic.Dictionary`2[System.String,System.String] getListingOffers(System.String, System.String, System.String, Region, System.Collections.Generic.Dictionary`2[System.String,SPAPIstab.DataModel+ItemAttribute])
+2022/09/08 0:14:33	System.Exception: 
+url:https://main-trademark.ssl-lolipop.jp/spapiphp/res.php
+2022/09/08 0:14:33	System.Exception: 
+postData:xml=%3Croot%3E%3Caction%3EgetListingOffers%3C%2Faction%3E%3CUserId%3EtestUser%3C%2FUserId%3E%3CappId
+2022/09/08 0:14:35	System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SPAPIstab.IF.post(String url, String postData, MethodBase methodBase, Exception& error)
+2022/09/08 0:14:35	System.Exception: 
+curerntMethod:System.Collections.Generic.Dictionary`2[System.String,System.String] getListingOffers(System.String, System.String, System.String, Region, System.Collections.Generic.Dictionary`2[System.String,SPAPIstab.DataModel+ItemAttribute])
+2022/09/08 0:14:35	System.Exception: 
+url:https://main-trademark.ssl-lolipop.jp/spapiphp/res.php
+2022/09/08 0:14:35	System.Exception: 
+postData:xml=%3Croot%3E%3Caction%3EgetListingOffers%3C%2Faction%3E%3CUserId%3EtestUser%3C%2FUserId%3E%3CappId
+2022/09/08 0:14:37	System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SPAPIstab.IF.post(String url, String postData, MethodBase methodBase, Exception& error)
+2022/09/08 0:14:37	System.Exception: 
+curerntMethod:System.Collections.Generic.Dictionary`2[System.String,System.String] getListingOffers(System.String, System.String, System.String, Region, System.Collections.Generic.Dictionary`2[System.String,SPAPIstab.DataModel+ItemAttribute])
+2022/09/08 0:14:37	System.Exception: 
+url:https://main-trademark.ssl-lolipop.jp/spapiphp/res.php
+2022/09/08 0:14:37	System.Exception: 
+postData:xml=%3Croot%3E%3Caction%3EgetListingOffers%3C%2Faction%3E%3CUserId%3EtestUser%3C%2FUserId%3E%3CappId
+2022/09/08 0:14:39	System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SPAPIstab.IF.post(String url, String postData, MethodBase methodBase, Exception& error)
+2022/09/08 0:14:39	System.Exception: 
+curerntMethod:System.Collections.Generic.Dictionary`2[System.String,System.String] getListingOffers(System.String, System.String, System.String, Region, System.Collections.Generic.Dictionary`2[System.String,SPAPIstab.DataModel+ItemAttribute])
+2022/09/08 0:14:39	System.Exception: 
+url:https://main-trademark.ssl-lolipop.jp/spapiphp/res.php
+2022/09/08 0:14:39	System.Exception: 
+postData:xml=%3Croot%3E%3Caction%3EgetListingOffers%3C%2Faction%3E%3CUserId%3EtestUser%3C%2FUserId%3E%3CappId
+2022/09/08 0:14:41	System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SPAPIstab.IF.post(String url, String postData, MethodBase methodBase, Exception& error)
+2022/09/08 0:14:41	System.Exception: 
+curerntMethod:System.Collections.Generic.Dictionary`2[System.String,System.String] getListingOffers(System.String, System.String, System.String, Region, System.Collections.Generic.Dictionary`2[System.String,SPAPIstab.DataModel+ItemAttribute])
+2022/09/08 0:14:41	System.Exception: 
+url:https://main-trademark.ssl-lolipop.jp/spapiphp/res.php
+2022/09/08 0:14:41	System.Exception: 
+postData:xml=%3Croot%3E%3Caction%3EgetListingOffers%3C%2Faction%3E%3CUserId%3EtestUser%3C%2FUserId%3E%3CappId
+2022/09/08 0:14:43	System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SPAPIstab.IF.post(String url, String postData, MethodBase methodBase, Exception& error)
+2022/09/08 0:14:43	System.Exception: 
+curerntMethod:System.Collections.Generic.Dictionary`2[System.String,System.String] getListingOffers(System.String, System.String, System.String, Region, System.Collections.Generic.Dictionary`2[System.String,SPAPIstab.DataModel+ItemAttribute])
+2022/09/08 0:14:43	System.Exception: 
+url:https://main-trademark.ssl-lolipop.jp/spapiphp/res.php
+2022/09/08 0:14:43	System.Exception: 
+postData:xml=%3Croot%3E%3Caction%3EgetListingOffers%3C%2Faction%3E%3CUserId%3EtestUser%3C%2FUserId%3E%3CappId
+2022/09/08 0:14:45	System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at SPAPIstab.IF.post(String url, String postData, MethodBase methodBase, Exception& error)
+2022/09/08 0:14:45	System.Exception: 
+curerntMethod:System.Collections.Generic.Dictionary`2[System.String,System.String] getListingOffers(System.String, System.String, System.String, Region, System.Collections.Generic.Dictionary`2[System.String,SPAPIstab.DataModel+ItemAttribute])
+2022/09/08 0:14:45	System.Exception: 
+url:https://main-trademark.ssl-lolipop.jp/spapiphp/res.php
+2022/09/08 0:14:45	System.Exception: 
+postData:xml=%3Croot%3E%3Caction%3EgetListingOffers%3C%2Faction%3E%3CUserId%3EtestUser%3C%2FUserId%3E%3CappId
