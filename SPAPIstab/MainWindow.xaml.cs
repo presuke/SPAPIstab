@@ -103,9 +103,11 @@ namespace SPAPIstab
                 String strAction = cmb.Content + "";
                 String _txtAsins = txtAsins.Text;
                 String _txtAsin = txtAsin.Text;
+                String _txtSKU = txtSKU.Text;
                 String _txtJans = txtJans.Text;
                 String _txtKeyword = txtKeywords.Text;
                 Boolean _chkNew = chkNew.IsChecked == true;
+                SPAPI.ItemCondition condition = _chkNew ? SPAPI.ItemCondition.NEW : SPAPI.ItemCondition.USED;
                 String strText = txtResponse.Text;
 
                 Dictionary<String, DataModel.ItemAttribute> dctReq = new Dictionary<String, DataModel.ItemAttribute>();
@@ -118,9 +120,15 @@ namespace SPAPIstab
                             DataModel.ItemAttribute item1 = new DataModel.ItemAttribute();
                             item1.asin = _txtAsin;
                             dctReq.Add(item1.asin, item1);
-                            SPAPI.ItemConditionGetItemOffers condition = _chkNew ? SPAPI.ItemConditionGetItemOffers.NEW : SPAPI.ItemConditionGetItemOffers.USED;
                             dctRes = SPAPI.getItemOffers(_SellerID, _RefleshToken, SPAPI.strAppId, SPAPI.Region.JP, dctReq, condition);
                             SPAPI.getItemOffersToDictionary(dctRes, ref dctReq, condition);
+                            break;
+                        case "getListingOffers":
+                            DataModel.ItemAttribute item2 = new DataModel.ItemAttribute();
+                            item2.sku = _txtSKU;
+                            dctReq.Add(item2.sku, item2);
+                            dctRes = SPAPI.getListingOffers(_SellerID, _RefleshToken, SPAPI.strAppId, SPAPI.Region.JP, dctReq, condition);
+                            SPAPI.getListingOffersToDictionary(dctRes, ref dctReq);
                             break;
 
                         case "getCatalogItem":
@@ -230,10 +238,25 @@ namespace SPAPIstab
                     case "getItemOffers":
                         lblAsins.IsEnabled = false;
                         lblAsin.IsEnabled = true;
+                        lblSKU.IsEnabled = false;
                         lblKeyword.IsEnabled = false;
                         lblJans.IsEnabled = false;
                         txtAsins.IsEnabled = false;
                         txtAsin.IsEnabled = true;
+                        txtSKU.IsEnabled = false;
+                        txtKeywords.IsEnabled = false;
+                        txtJans.IsEnabled = false;
+                        chkNew.IsEnabled = true;
+                        break;
+                    case "getListingOffers":
+                        lblAsins.IsEnabled = false;
+                        lblAsin.IsEnabled = false;
+                        lblSKU.IsEnabled = true;
+                        lblKeyword.IsEnabled = false;
+                        lblJans.IsEnabled = false;
+                        txtAsins.IsEnabled = false;
+                        txtAsin.IsEnabled = false;
+                        txtSKU.IsEnabled = true;
                         txtKeywords.IsEnabled = false;
                         txtJans.IsEnabled = false;
                         chkNew.IsEnabled = true;
@@ -241,10 +264,12 @@ namespace SPAPIstab
                     case "getCatalogItem":
                         lblAsins.IsEnabled = true;
                         lblAsin.IsEnabled = false;
+                        lblSKU.IsEnabled = false;
                         lblKeyword.IsEnabled = false;
                         lblJans.IsEnabled = false;
                         txtAsins.IsEnabled = true;
                         txtAsin.IsEnabled = false;
+                        txtSKU.IsEnabled = true;
                         txtKeywords.IsEnabled = false;
                         txtJans.IsEnabled = false;
                         chkNew.IsEnabled = false;
@@ -252,10 +277,12 @@ namespace SPAPIstab
                     case "listCatalogItems_JAN":
                         lblAsins.IsEnabled = false;
                         lblAsin.IsEnabled = false;
+                        lblSKU.IsEnabled = false;
                         lblKeyword.IsEnabled = false;
                         lblJans.IsEnabled = true;
                         txtAsins.IsEnabled = false;
                         txtAsin.IsEnabled = false;
+                        txtSKU.IsEnabled = true;
                         txtKeywords.IsEnabled = false;
                         txtJans.IsEnabled = true;
                         chkNew.IsEnabled = false;
@@ -263,10 +290,12 @@ namespace SPAPIstab
                     case "listCatalogItems_KEYWORD":
                         lblAsins.IsEnabled = false;
                         lblAsin.IsEnabled = false;
+                        lblSKU.IsEnabled = false;
                         lblKeyword.IsEnabled = true;
                         lblJans.IsEnabled = false;
                         txtAsins.IsEnabled = false;
                         txtAsin.IsEnabled = false;
+                        txtSKU.IsEnabled = true;
                         txtKeywords.IsEnabled = true;
                         txtJans.IsEnabled = false;
                         chkNew.IsEnabled = false;
@@ -276,10 +305,12 @@ namespace SPAPIstab
                     case "getMyFeesEstimateForASIN":
                         lblAsins.IsEnabled = true;
                         lblAsin.IsEnabled = false;
+                        lblSKU.IsEnabled = false;
                         lblKeyword.IsEnabled = false;
                         lblJans.IsEnabled = false;
                         txtAsins.IsEnabled = true;
                         txtAsin.IsEnabled = false;
+                        txtSKU.IsEnabled = true;
                         txtKeywords.IsEnabled = false;
                         txtJans.IsEnabled = false;
                         chkNew.IsEnabled = false;

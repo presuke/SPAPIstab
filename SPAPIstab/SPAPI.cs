@@ -11,8 +11,8 @@ namespace SPAPIstab
 {
     class SPAPI
     {
-        internal const String strAppId = "{set your sp-api application id}"; 
-        private const String strEndPoint = "{set your backend url}";
+        internal const String strAppId = "amzn1.sellerapps.app.b8e54650-144f-4372-baf3-8db8d33115b8";
+        private const String strEndPoint = "https://main-trademark.ssl-lolipop.jp/spapiphp/res.php";
 
         private static Dictionary<Region, String> dctRegion_region = new Dictionary<Region, string>() { { Region.JP, "us-west-2" } };
         private static Dictionary<Region, String> dctRegion_endpoint = new Dictionary<Region, string>() { { Region.JP, "https://sellingpartnerapi-fe.amazon.com" } };
@@ -47,7 +47,7 @@ namespace SPAPIstab
             Sku
         }
 
-        internal enum ItemConditionGetItemOffers
+        internal enum ItemCondition
         {
             NEW,
             USED
@@ -206,7 +206,7 @@ namespace SPAPIstab
             return strRet;
         }
 
-        internal static Dictionary<String, String> getItemOffers(String selling_partner_id, String refleshToken, String appId, Region region, Dictionary<String, DataModel.ItemAttribute> dct, ItemConditionGetItemOffers item_condition)
+        internal static Dictionary<String, String> getItemOffers(String selling_partner_id, String refleshToken, String appId, Region region, Dictionary<String, DataModel.ItemAttribute> dct, ItemCondition item_condition)
         {
             Dictionary<String, String> dctRet = new Dictionary<string, string>();
 
@@ -374,7 +374,7 @@ namespace SPAPIstab
             return strRet;
         }
 
-        internal static Dictionary<String, String> getListingOffers(String selling_partner_id, String refleshToken, String appId, Region region, Dictionary<String, DataModel.ItemAttribute> dct)
+        internal static Dictionary<String, String> getListingOffers(String selling_partner_id, String refleshToken, String appId, Region region, Dictionary<String, DataModel.ItemAttribute> dct, ItemCondition item_condition)
         {
             Dictionary<String, String> dctRet = new Dictionary<string, string>();
 
@@ -397,6 +397,7 @@ namespace SPAPIstab
                         dctParam.Add("selling_partner_id", selling_partner_id);
                         dctParam.Add("refleshToken", refleshToken);
                         dctParam.Add("seller_sku", strSku);
+                        dctParam.Add("item_condition", item_condition.ToString());
                         dctParam.Add("format", "json");
 
                         String strURL = strEndPoint;
@@ -912,7 +913,7 @@ namespace SPAPIstab
             return strRet;
         }
 
-        internal static void getItemOffersToDictionary(Dictionary<String, String> response, ref Dictionary<String, DataModel.ItemAttribute> dct, ItemConditionGetItemOffers kind)
+        internal static void getItemOffersToDictionary(Dictionary<String, String> response, ref Dictionary<String, DataModel.ItemAttribute> dct, ItemCondition condition)
         {
             const String SELLERID_AMAZON = "AN1VRQENFRJN5";
             try

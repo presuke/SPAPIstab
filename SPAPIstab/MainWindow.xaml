@@ -15,7 +15,7 @@
         <Label Content="RefleshToken" HorizontalAlignment="Left" Margin="46,52,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="SellerId" HorizontalAlignment="Left" Margin="138,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="465" Grid.ColumnSpan="2"/>
         <TextBox x:Name="RefleshToken" HorizontalAlignment="Left" Margin="138,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="465" Grid.ColumnSpan="2"/>
-        <Button x:Name="btnCall" Content="Call" HorizontalAlignment="Left" Margin="362,303,0,0" VerticalAlignment="Top" Click="btnCall_Click" Grid.Column="1" Height="42" Width="130"/>
+        <Button x:Name="btnCall" Content="Call" HorizontalAlignment="Left" Margin="362,315,0,0" VerticalAlignment="Top" Click="btnCall_Click" Grid.Column="1" Height="42" Width="130"/>
         <Button x:Name="btnTest" Content="Test" HorizontalAlignment="Left" Margin="433,55,0,0" VerticalAlignment="Top" Click="btnTest_Click" Grid.Column="1"/>
         <ComboBox x:Name="cmbAction" HorizontalAlignment="Left" Margin="89,217,0,0" VerticalAlignment="Top" Width="242" SelectionChanged="cmbAction_SelectionChanged" Grid.ColumnSpan="2">
             <ComboBoxItem Content="getItemOffers"/>
@@ -36,9 +36,11 @@
         <Label x:Name="lblJans" Content="Jans:" HorizontalAlignment="Left" Margin="45,0,0,0" VerticalAlignment="Center"/>
         <TextBox x:Name="txtKeywords" HorizontalAlignment="Left" Margin="89,294,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="340" Grid.ColumnSpan="2"/>
         <Label x:Name="lblKeyword" Content="Keyword:" HorizontalAlignment="Left" Margin="20,290,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="chkNew" Content="(on:New, off:Used)" HorizontalAlignment="Left" Margin="347,264,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <CheckBox x:Name="chkNew" Content="(on:New, off:Used)" HorizontalAlignment="Left" Margin="347,291,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <TextBox x:Name="txtResponse" HorizontalAlignment="Left" Margin="10,357,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="780" Height="189" Grid.ColumnSpan="2"/>
         <TextBlock x:Name="lnkGetApiKey" Grid.Column="1" HorizontalAlignment="Left" Margin="433,32,0,0" TextWrapping="Wrap" Text="SP-APIキーの取得方法" VerticalAlignment="Top" Foreground="#FF5345FF" TextDecorations="Underline" MouseDown="lnkGetApiKey_MouseDown" />
+        <Label x:Name="lblSKU" Content="SKU:" HorizontalAlignment="Left" Margin="302,264,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBox x:Name="txtSKU" HorizontalAlignment="Left" Margin="347,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="145" Height="18" Grid.Column="1"/>
 
     </Grid>
 </Window>
