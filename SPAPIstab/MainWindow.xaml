@@ -39,7 +39,7 @@
         <CheckBox x:Name="chkNew" Content="(on:New, off:Used)" HorizontalAlignment="Left" Margin="347,291,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <TextBox x:Name="txtResponse" HorizontalAlignment="Left" Margin="10,357,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="780" Height="189" Grid.ColumnSpan="2"/>
         <TextBlock x:Name="lnkGetApiKey" Grid.Column="1" HorizontalAlignment="Left" Margin="433,32,0,0" TextWrapping="Wrap" Text="SP-APIキーの取得方法" VerticalAlignment="Top" Foreground="#FF5345FF" TextDecorations="Underline" MouseDown="lnkGetApiKey_MouseDown" />
-        <Label x:Name="lblSKU" Content="SKU:" HorizontalAlignment="Left" Margin="302,264,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="lblSKU" Content="SKU:" HorizontalAlignment="Left" Margin="302,0,0,0" VerticalAlignment="Center" Grid.Column="1"/>
         <TextBox x:Name="txtSKU" HorizontalAlignment="Left" Margin="347,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="145" Height="18" Grid.Column="1"/>
 
     </Grid>

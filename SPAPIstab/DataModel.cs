@@ -15,7 +15,7 @@ namespace SPAPIstab
             internal String sku;    //SKU
             internal String title;  //商品名
             internal String category;   //商品カテゴリ
-            internal String brand;  //ブランド 
+            internal String brand;  //ブランド
             internal String model;  //型式
             internal String color;  //色
             internal int rank;  //ランキング
