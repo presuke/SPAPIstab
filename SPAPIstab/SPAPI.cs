@@ -20,6 +20,8 @@ namespace SPAPIstab
 
         internal static String RETURN_CODE_SUCCESS = "Success";
 
+        const String SELLERID_AMAZON = "AN1VRQENFRJN5";
+
         internal enum Region
         {
             JP,
@@ -915,7 +917,6 @@ namespace SPAPIstab
 
         internal static void getItemOffersToDictionary(Dictionary<String, String> response, ref Dictionary<String, DataModel.ItemAttribute> dct, ItemCondition condition)
         {
-            const String SELLERID_AMAZON = "AN1VRQENFRJN5";
             try
             {
                 foreach (String strKey in response.Keys)
@@ -1516,35 +1517,212 @@ namespace SPAPIstab
                             String strJson = response[strKey];
                             if (!String.IsNullOrEmpty(strJson))
                             {
-                                /*
-                                XmlDocument objDom = new XmlDocument();
-                                objDom.LoadXml(strXml);
-
-                                XmlNodeList objItems = objDom.SelectNodes(".//payload/Items");
-                                if (objItems.Count > 0)
+                                String strXml = response[strKey];
+                                if (!String.IsNullOrEmpty(strXml))
                                 {
-                                    int idxRow = 0;
-                                    foreach (XmlNode objItem in objItems)
+                                    DataModel.ItemAttribute item = dct[strKey];
+
+                                    XmlDocument objDom = new XmlDocument();
+                                    objDom.LoadXml(strXml);
+
+                                    XmlNodeList objLowestPrices = objDom.SelectNodes(".//payload/Summary/LowestPrices");
+                                    XmlNodeList objBuyBoxPrices = objDom.SelectNodes(".//payload/Summary/BuyBoxPrices");
+                                    XmlNodeList objNumberOfOffers = objDom.SelectNodes(".//payload/Summary/NumberOfOffers");
+                                    XmlNodeList objBuyBoxEligibleOffers = objDom.SelectNodes(".//payload/Summary/BuyBoxEligibleOffers");
+                                    XmlNodeList objOffers = objDom.SelectNodes(".//payload/Offers");
+
+                                    //最安値
+                                    foreach (XmlNode objLowestPrice in objLowestPrices)
                                     {
-                                        DataModel.ItemAttribute item = dct[strKey];
+                                        XmlNode objCondition = objLowestPrice.SelectSingleNode("./condition");
+                                        XmlNode objFulfillmentChannel = objLowestPrice.SelectSingleNode("./fulfillmentChannel");
+                                        int intListingPrice = 0;
+                                        int intShippingPrice = 0;
+                                        int intPoint = 0;
 
-                                        if (strKey.Length == 13)
-                                            item.ean = strKey;
+                                        int.TryParse(getXmlInnerText(objLowestPrice.SelectSingleNode("./ListingPrice/Amount")), out intListingPrice);
+                                        int.TryParse(getXmlInnerText(objLowestPrice.SelectSingleNode("./Shipping/Amount")), out intShippingPrice);
+                                        int.TryParse(getXmlInnerText(objLowestPrice.SelectSingleNode("./Points/Amount")), out intPoint);
+                                        switch (getXmlInnerText(objCondition) + "_" + getXmlInnerText(objFulfillmentChannel))
+                                        {
+                                            case "new_Amazon":
+                                                item.pna = intListingPrice + intShippingPrice;
+                                                item.pna_s = intShippingPrice;
+                                                item.pna_p = intPoint;
+                                                if (item.pn == 0)
+                                                {
+                                                    item.pn = intListingPrice + intShippingPrice;
+                                                    item.pn_s = intShippingPrice;
+                                                    item.pn_p = intPoint;
+                                                }
+                                                break;
 
-                                        item.asin = getXmlInnerText(objItem.SelectSingleNode(".//Identifiers/MarketplaceASIN/ASIN"));
+                                            case "new_Merchant":
+                                                item.pnm = intListingPrice + intShippingPrice;
+                                                item.pnm_s = intShippingPrice;
+                                                item.pnm_p = intPoint;
+                                                if (item.pn == 0)
+                                                {
+                                                    item.pn = intListingPrice + intShippingPrice;
+                                                    item.pn_s = intShippingPrice;
+                                                    item.pn_p = intPoint;
+                                                }
+                                                break;
 
-                                        setItemByCatalog(objItem, ref item);
+                                            case "used_Amazon":
+                                                item.pua = intListingPrice + intShippingPrice;
+                                                item.pua_s = intShippingPrice;
+                                                item.pua_p = intPoint;
+                                                if (item.pu == 0)
+                                                {
+                                                    item.pu = intListingPrice + intShippingPrice;
+                                                    item.pu_s = intShippingPrice;
+                                                    item.pu_p = intPoint;
+                                                }
+                                                break;
 
-                                        //1Jan : nAsinあった場合の対応
-                                        if (idxRow == 0)
-                                            dct[strKey] = item;
-                                        else
-                                            dct.Add(strKey + new string('*', idxRow), item);
-
-                                        idxRow++;
+                                            case "used_Merchant":
+                                                item.pum = intListingPrice + intShippingPrice;
+                                                item.pum_s = intShippingPrice;
+                                                item.pum_p = intPoint;
+                                                if (item.pu == 0)
+                                                {
+                                                    item.pu = intListingPrice + intShippingPrice;
+                                                    item.pu_s = intShippingPrice;
+                                                    item.pu_p = intPoint;
+                                                }
+                                                break;
+                                        }
                                     }
+
+                                    //カート価格
+                                    foreach (XmlNode objBuyBoxPrice in objBuyBoxPrices)
+                                    {
+                                        XmlNode objCondition = objBuyBoxPrice.SelectSingleNode("./condition");
+                                        int intListingPrice = 0;
+                                        int intShippingPrice = 0;
+                                        int intPoint = 0;
+
+                                        int.TryParse(getXmlInnerText(objBuyBoxPrice.SelectSingleNode("./ListingPrice/Amount")), out intListingPrice);
+                                        int.TryParse(getXmlInnerText(objBuyBoxPrice.SelectSingleNode("./Shipping/Amount")), out intShippingPrice);
+                                        int.TryParse(getXmlInnerText(objBuyBoxPrice.SelectSingleNode("./Points/Amount")), out intPoint);
+                                        switch (getXmlInnerText(objCondition))
+                                        {
+                                            case "new":
+                                                item.pc = intListingPrice + intShippingPrice;
+                                                item.pc_s = intShippingPrice;
+                                                item.pc_p = intPoint;
+                                                if (item.pn == 0)
+                                                {
+                                                    item.pn = intListingPrice + intShippingPrice;
+                                                    item.pn_s = intShippingPrice;
+                                                    item.pn_p = intPoint;
+                                                }
+                                                break;
+
+                                            case "used":
+                                                break;
+                                        }
+                                    }
+
+                                    //出品者数
+                                    foreach (XmlNode objNumberOfOffer in objNumberOfOffers)
+                                    {
+                                        XmlNode objCondition = objNumberOfOffer.SelectSingleNode("./condition");
+                                        XmlNode objFulfillmentChannel = objNumberOfOffer.SelectSingleNode("./fulfillmentChannel");
+                                        int intQ = 0;
+
+                                        int.TryParse(getXmlInnerText(objNumberOfOffer.SelectSingleNode("./OfferCount")), out intQ);
+                                        switch (getXmlInnerText(objCondition) + "_" + getXmlInnerText(objFulfillmentChannel))
+                                        {
+                                            case "new_Amazon":
+                                                item.qna = intQ;
+                                                break;
+
+                                            case "new_Merchant":
+                                                item.qnm = intQ;
+                                                break;
+
+                                            case "used_Amazon":
+                                                item.qua = intQ;
+                                                break;
+
+                                            case "used_Merchant":
+                                                item.qum = intQ;
+                                                break;
+                                        }
+                                    }
+
+                                    //カート出品者数
+                                    foreach (XmlNode objBuyBoxEligibleOffer in objBuyBoxEligibleOffers)
+                                    {
+                                        XmlNode objCondition = objBuyBoxEligibleOffer.SelectSingleNode("./condition");
+                                        XmlNode objFulfillmentChannel = objBuyBoxEligibleOffer.SelectSingleNode("./fulfillmentChannel");
+                                        int intQ = 0;
+
+                                        int.TryParse(getXmlInnerText(objBuyBoxEligibleOffer.SelectSingleNode("./OfferCount")), out intQ);
+                                        switch (getXmlInnerText(objCondition) + "_" + getXmlInnerText(objFulfillmentChannel))
+                                        {
+                                            case "new_Amazon":
+                                                item.qca = intQ;
+                                                break;
+
+                                            case "new_Merchant":
+                                                item.qcm = intQ;
+                                                break;
+
+                                            case "used_Amazon":
+                                                break;
+
+                                            case "used_Merchant":
+                                                break;
+                                        }
+                                    }
+
+                                    //価格リスト
+                                    if (item.lpn == null)
+                                        item.lpn = new List<DataModel.Offer>();
+
+                                    if (item.lpu == null)
+                                        item.lpu = new List<DataModel.Offer>();
+
+                                    foreach (XmlNode objOffer in objOffers)
+                                    {
+                                        DataModel.Offer offer = new DataModel.Offer();
+                                        int.TryParse(getXmlInnerText(objOffer.SelectSingleNode("./Shipping/Amount")), out offer.Shipping);
+                                        int.TryParse(getXmlInnerText(objOffer.SelectSingleNode("./ListingPrice/Amount")), out offer.ListingPrice);
+                                        int.TryParse(getXmlInnerText(objOffer.SelectSingleNode("./ShippingTime/maximumHours")), out offer.maximumHours);
+                                        int.TryParse(getXmlInnerText(objOffer.SelectSingleNode("./ShippingTime/minimumHours")), out offer.minimumHours);
+                                        offer.availabilityType = getXmlInnerText(objOffer.SelectSingleNode("./ShippingTime/availabilityType"));
+                                        int.TryParse(getXmlInnerText(objOffer.SelectSingleNode("./SellerFeedbackRating/FeedbackCount")), out offer.FeedbackCount);
+                                        int.TryParse(getXmlInnerText(objOffer.SelectSingleNode("./SellerFeedbackRating/SellerFeedbackRating")), out offer.SellerFeedbackRating);
+                                        offer.SubCondition = getXmlInnerText(objOffer.SelectSingleNode("./SubCondition"));
+                                        offer.ShipsFromCountry = getXmlInnerText(objOffer.SelectSingleNode("./ShipsFrom/Country"));
+                                        offer.SubCondition = getXmlInnerText(objOffer.SelectSingleNode("./SubCondition"));
+                                        offer.IsBuyBoxWinner = getXmlInnerText(objOffer.SelectSingleNode("./IsBuyBoxWinner"));
+                                        offer.IsFeaturedMerchant = getXmlInnerText(objOffer.SelectSingleNode("./IsFeaturedMerchant"));
+                                        offer.IsFulfilledByAmazon = getXmlInnerText(objOffer.SelectSingleNode("./IsFulfilledByAmazon"));
+                                        offer.SellerId = getXmlInnerText(objOffer.SelectSingleNode("./SellerId"));
+                                        offer.ConditionNotes = getXmlInnerText(objOffer.SelectSingleNode("./ConditionNotes"));
+
+
+                                        //Amazon.co.jp本体価格
+                                        if (offer.SellerId == SELLERID_AMAZON)
+                                            item.pa = offer.ListingPrice;
+
+
+                                        //Offerリストへ入れる
+                                        if (offer.SubCondition == "new")
+                                            item.lpn.Add(offer);
+                                        else
+                                            item.lpu.Add(offer);
+                                    }
+
+                                    dct[strKey] = item;
                                 }
-                                */
+                                else
+                                {
+                                }
                             }
                             else
                             {
@@ -1573,8 +1751,27 @@ namespace SPAPIstab
                 foreach (String strKey in response.Keys)
                 {
                     String strXml = response[strKey];
-                    if (strXml.Contains("Ofers"))
+                    XmlDocument objDom = new XmlDocument();
+                    objDom.LoadXml(strXml);
+
+                    foreach (XmlNode objItem in objDom.SelectNodes(".//Product"))
                     {
+                        String strAsin = getXmlInnerText(objItem.SelectSingleNode("./Identifiers/MarketplaceASIN/ASIN"));
+                        if (dct.Keys.Contains(strAsin))
+                        {
+                            DataModel.ItemAttribute item = dct[strAsin];
+                            item.sku = getXmlInnerText(objItem.SelectSingleNode("./Offers/SellerSKU"));
+                            switch (getXmlInnerText(objItem.SelectSingleNode("./Offers/ItemCondition"))){
+                                case "New":
+                                    int.TryParse(getXmlInnerText(objItem.SelectSingleNode("./RegularPrice/Amount")), out item.pn);
+                                    break;
+
+                                case "Used":
+                                    int.TryParse(getXmlInnerText(objItem.SelectSingleNode("./RegularPrice/Amount")), out item.pu);
+                                    break;
+                            }
+                            dct[strAsin] = item;
+                        }
                     }
                 }
             }
