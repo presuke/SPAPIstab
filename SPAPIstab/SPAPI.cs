@@ -1103,7 +1103,7 @@ namespace SPAPIstab
                                     int.TryParse(getXmlInnerText(objOffer.SelectSingleNode("./ShippingTime/minimumHours")), out offer.minimumHours);
                                     offer.availabilityType = getXmlInnerText(objOffer.SelectSingleNode("./ShippingTime/availabilityType"));
                                     int.TryParse(getXmlInnerText(objOffer.SelectSingleNode("./SellerFeedbackRating/FeedbackCount")), out offer.FeedbackCount);
-                                    int.TryParse(getXmlInnerText(objOffer.SelectSingleNode("./SellerFeedbackRating/SellerFeedbackRating")), out offer.SellerFeedbackRating);
+                                    int.TryParse(getXmlInnerText(objOffer.SelectSingleNode("./SellerFeedbackRating/SellerPositiveFeedbackRating")), out offer.SellerFeedbackRating);
                                     offer.SubCondition = getXmlInnerText(objOffer.SelectSingleNode("./SubCondition"));
                                     offer.ShipsFromCountry = getXmlInnerText(objOffer.SelectSingleNode("./ShipsFrom/Country"));
                                     offer.SubCondition = getXmlInnerText(objOffer.SelectSingleNode("./SubCondition"));
@@ -1695,7 +1695,7 @@ namespace SPAPIstab
                                         int.TryParse(getXmlInnerText(objOffer.SelectSingleNode("./ShippingTime/minimumHours")), out offer.minimumHours);
                                         offer.availabilityType = getXmlInnerText(objOffer.SelectSingleNode("./ShippingTime/availabilityType"));
                                         int.TryParse(getXmlInnerText(objOffer.SelectSingleNode("./SellerFeedbackRating/FeedbackCount")), out offer.FeedbackCount);
-                                        int.TryParse(getXmlInnerText(objOffer.SelectSingleNode("./SellerFeedbackRating/SellerFeedbackRating")), out offer.SellerFeedbackRating);
+                                        int.TryParse(getXmlInnerText(objOffer.SelectSingleNode("./SellerFeedbackRating/SellerPositiveFeedbackRating")), out offer.SellerFeedbackRating);
                                         offer.SubCondition = getXmlInnerText(objOffer.SelectSingleNode("./SubCondition"));
                                         offer.ShipsFromCountry = getXmlInnerText(objOffer.SelectSingleNode("./ShipsFrom/Country"));
                                         offer.SubCondition = getXmlInnerText(objOffer.SelectSingleNode("./SubCondition"));
@@ -1763,11 +1763,11 @@ namespace SPAPIstab
                             item.sku = getXmlInnerText(objItem.SelectSingleNode("./Offers/SellerSKU"));
                             switch (getXmlInnerText(objItem.SelectSingleNode("./Offers/ItemCondition"))){
                                 case "New":
-                                    int.TryParse(getXmlInnerText(objItem.SelectSingleNode("./RegularPrice/Amount")), out item.pn);
+                                    int.TryParse(getXmlInnerText(objItem.SelectSingleNode("./Offers/RegularPrice/Amount")), out item.pn);
                                     break;
 
                                 case "Used":
-                                    int.TryParse(getXmlInnerText(objItem.SelectSingleNode("./RegularPrice/Amount")), out item.pu);
+                                    int.TryParse(getXmlInnerText(objItem.SelectSingleNode("./Offers/RegularPrice/Amount")), out item.pu);
                                     break;
                             }
                             dct[strAsin] = item;
