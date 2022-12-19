@@ -19,6 +19,7 @@
         <Button x:Name="btnTest" Content="Test" HorizontalAlignment="Left" Margin="433,55,0,0" VerticalAlignment="Top" Click="btnTest_Click" Grid.Column="1"/>
         <ComboBox x:Name="cmbAction" HorizontalAlignment="Left" Margin="89,217,0,0" VerticalAlignment="Top" Width="242" SelectionChanged="cmbAction_SelectionChanged" Grid.ColumnSpan="2">
             <ComboBoxItem Content="getItemOffers"/>
+            <ComboBoxItem Content="getItemsOffersBatch"/>
             <ComboBoxItem Content="getCatalogItem"/>
             <ComboBoxItem Content="getPricing"/>
             <ComboBoxItem Content="listCatalogItems_JAN"/>
